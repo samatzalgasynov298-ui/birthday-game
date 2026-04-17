@@ -1,0 +1,77 @@
+/* Подключаем шрифты правильно (это должно быть ПЕРВОЙ строкой) */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #db6c7f, #ffc3a0);
+    font-family: 'Comfortaa', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Навигация (кнопки сверху) */
+.nav-menu {
+    margin: 20px 0; /* Внешний отступ: 20px сверху и снизу */
+    display: flex;
+    gap: 15px; /* Расстояние между кнопками */
+}
+
+.nav-menu button {
+    background: white;
+    color: #ff4081;
+    border: none;
+    padding: 10px 20px; /* Внутренние отступы кнопки */
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Контейнеры для игр */
+#game-container, #catch-game-container {
+    position: relative;
+    border: 8px solid white;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    overflow: hidden;
+    /* Центрируем саму коробку игры */
+    margin: 0 auto; 
+}
+
+/* Интерфейс (счет) */
+#ui, #catch-ui {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#score, #catch-score {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: #d81b60;
+}
+
+/* Окно сообщения (Нажми, чтобы начать) */
+#message, #catch-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* ОГРОМНЫЕ ОТСТУПЫ ДЛЯ КРАСОТЫ */
+    padding: 30px; 
+    
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    border: 3px dashed #ff80ab;
+    color: #ad1457;
+    text-align: center;
+    min-width: 200px;
+    z-index: 20;
+}

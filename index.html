@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>С Днем Рождения!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@900&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-menu">
+        <button onclick="showGame('flappy')">🎮 Flappy Goha</button>
+        <button onclick="showGame('catch')">💖 Лови сердца</button>
+    </div>
+
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="ui">
+            <div id="score">Счет: 0</div>
+            <div id="message">Нажми Пробел, чтобы летать!</div>
+        </div>
+    </div>
+
+    <div id="catch-game-container" style="display: none;">
+        <canvas id="catchCanvas"></canvas>
+        <div id="catch-ui">
+            <div id="catch-score">Сердечек: 0</div>
+            <div id="catch-message">Двигай мышкой, чтобы ловить!</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

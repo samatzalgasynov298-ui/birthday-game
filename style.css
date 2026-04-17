@@ -86,3 +86,40 @@ body {
     width: 200px;
     z-index: 100;
 }
+/* Исправляем положение счета */
+#ui, #catch-ui {
+    position: absolute;
+    top: 15px; 
+    left: 15px; /* Добавляем Margin слева, чтобы счет не лип к углу */
+    right: 15px;
+    display: flex;
+    justify-content: space-between; /* Распределяем счет и сообщения */
+    pointer-events: none;
+    z-index: 10;
+}
+
+#score, #catch-score {
+    background: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон, чтобы текст был виден */
+    padding: 5px 15px; /* Внутренний отступ (Padding) */
+    border-radius: 10px;
+    font-weight: 900;
+    color: #d81b60;
+}
+
+/* Исправляем кнопки меню */
+.nav-menu {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-menu button {
+    padding: 12px 20px; /* Увеличиваем Padding, чтобы было удобно нажимать пальцем */
+    border-radius: 25px;
+    font-size: 14px;
+    transition: transform 0.2s;
+}
+
+.nav-menu button:active {
+    transform: scale(0.95); /* Эффект нажатия */
+}

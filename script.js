@@ -15,9 +15,24 @@ document.getElementById('start-game-btn').onclick = function() {
 
 function saveRecord(finalScore) {
     let records = JSON.parse(localStorage.getItem('gohaRecords')) || [];
-    records.push({ name: currentPlayer, score: finalScore });
+    
+    // Ищем, есть ли уже игрок с таким именем
+    let existingPlayer = records.find(r => r.name === currentPlayer);
+
+    if (existingPlayer) {
+        // Если игрок есть, обновляем счет только если он больше текущего
+        if (finalScore > existingPlayer.score) {
+            existingPlayer.score = finalScore;
+        }
+    } else {
+        // Если игрока нет, просто добавляем его
+        records.push({ name: currentPlayer, score: finalScore });
+    }
+
+    // Сортируем (от большего к меньшему) и оставляем ТОП-5
     records.sort((a, b) => b.score - a.score);
-    records = records.slice(0, 5); // Только топ-5
+    records = records.slice(0, 5);
+    
     localStorage.setItem('gohaRecords', JSON.stringify(records));
     updateLeaderboard();
 }

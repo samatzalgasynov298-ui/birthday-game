@@ -41,37 +41,29 @@ body {
     margin: 0 auto; 
 }
 
-/* Интерфейс (счет) */
 #ui, #catch-ui {
     position: absolute;
-    top: 20px;
+    top: 20px; /* Сдвигаем счет в самый верх */
+    left: 0;
     width: 100%;
     text-align: center;
     pointer-events: none;
-    z-index: 10;
 }
 
 #score, #catch-score {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-    color: #d81b60;
+    font-size: 24px;
+    color: #ff4081;
+    margin: 0; /* Убираем лишние отступы */
 }
 
-/* Окно сообщения (Нажми, чтобы начать) */
 #message, #catch-message {
     position: absolute;
-    top: 50%;
+    top: 50%; /* Сообщение ровно по центру */
     left: 50%;
     transform: translate(-50%, -50%);
-    
-    /* ОГРОМНЫЕ ОТСТУПЫ ДЛЯ КРАСОТЫ */
-    padding: 30px; 
-    
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 25px;
-    border: 3px dashed #ff80ab;
-    color: #ad1457;
-    text-align: center;
-    min-width: 200px;
-    z-index: 20;
+    background: white;
+    padding: 20px 40px; /* Добавляем "воздуха" внутри окна */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 100;
 }

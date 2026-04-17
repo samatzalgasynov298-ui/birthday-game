@@ -1,6 +1,6 @@
 // --- ОБЩИЕ ПЕРЕМЕННЫЕ ---
 const birdImg = new Image();
-birdImg.src = 'img/goha-removebg-preview.png';
+birdImg.src = 'goha-removebg-preview.png';
 
 // --- ИГРА 1: FLAPPY ---
 const canvas = document.getElementById('gameCanvas');

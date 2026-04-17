@@ -5,19 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>С Днем Рождения!</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@900&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="name-modal" class="modal">
+        <div class="modal-content">
+            <h2 style="font-family: 'Montserrat'; color: #ff4081;">Привет! 🎁</h2>
+            <p>Кто сегодня играет за Гоху?</p>
+            <input type="text" id="player-name" placeholder="Твое имя..." maxlength="15">
+            <button id="start-game-btn">Погнали!</button>
+        </div>
+    </div>
+
     <div class="nav-menu">
         <button onclick="showGame('flappy')">🎮 Flappy Goha</button>
         <button onclick="showGame('catch')">💖 Лови сердца</button>
+    </div>
+
+    <div id="leaderboard">
+        <h4>🏆 Топ Игроков</h4>
+        <ul id="score-list"></ul>
     </div>
 
     <div id="game-container">
         <canvas id="gameCanvas"></canvas>
         <div id="ui">
             <div id="score">Счет: 0</div>
-            <div id="message">Нажми Пробел, чтобы летать!</div>
+            <div id="message">Нажми Пробел или Тапни!</div>
         </div>
     </div>
 
@@ -25,7 +39,7 @@
         <canvas id="catchCanvas"></canvas>
         <div id="catch-ui">
             <div id="catch-score">Сердечек: 0</div>
-            <div id="catch-message">Двигай мышкой, чтобы ловить!</div>
+            <div id="catch-message">Лови сердца!</div>
         </div>
     </div>
 
